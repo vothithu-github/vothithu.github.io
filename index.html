@@ -15,6 +15,9 @@
     }
     .collapse{
         position: fixed;
+        width: 2107px;
+        font-size: 24px;
+        height: 80px;
     }
     #ftco-nav li {
         color: #f1f1f1;
@@ -42,14 +45,35 @@
 
         width: 400px;
     }
-
+    div.w3-bar-block {
+        width: 100%;
+        height: 80px;
+        background: cornflowerblue;
+        margin: auto;
+    }
+    div.w3-sidebar button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        background: cornflowerblue;
+    }
+    div.w3-sidebar button:hover {
+        background-color: #ddd;
+    }
+    div.w3-sidebar button.active {
+        background-color: #ccc;
+    }
     div.tab {
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
+        background: #e6e6e6;
     }
-
-    /* định dạng các button tab */
     div.tab button {
         background-color: inherit;
         float: left;
@@ -59,31 +83,45 @@
         padding: 14px 16px;
         transition: 0.3s;
         font-size: 17px;
+        background: cornflowerblue;
     }
-
-    /* đổi màu khi một button tab được hover */
     div.tab button:hover {
         background-color: #ddd;
     }
-
-    /* đổi màu nền cho tab đang được hiển thị nội dung */
     div.tab button.active {
         background-color: #ccc;
     }
-
-    /* định dạng nội dung hiển thị */
     .tabcontent {
         display: none;
         padding: 6px 12px;
         border: 1px solid #ccc;
         border-top: none;
+        background: white;
     }
-    /*.nav-item1 {*/
-    /*    border: 1px  solid black;*/
-    /*    background-color: #B3B3B3;*/
-    /*    display: inline-block;*/
-    /*    !*width: 34px;*!*/
-    /*}*/
+    .tabcontent ol li{
+        font-size: 30px;
+        text-align: justify;
+    }
+    .tabcontent ol li span{
+        font-size: 30px;
+        color: red;
+    }
+    .temp{
+        font-size: 30px;
+        text-align: justify;
+        color: #363FFE;
+    }
+    .image-container{
+        font-size: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .image-container span{
+        font-size: 25px;
+        color: #F77825;
+    }
     .socials ul li{
         list-style: none;
         display: inline-block;
@@ -153,137 +191,117 @@ line-height: 3pc;">
 </section>
 <hr  width="30%" align="center" />
 <section class="ftco-section ftco-no-pb goto-here" id="lab-section">
-    <div class="container">
-        <div class="row" style="margin-left: 150px">
+    <div class="w3-sidebar w3-bar-block w3-black w3-card" style="width: 100%; height: 130px; background: cornflowerblue">
+        <h2 class="w3-bar-item">LAB</h2>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Lab1')" style="height: 50px;
+    font-size: 20px">Lab1</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Lab2')" style="height: 50px;
+    font-size: 20px">Lab2</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Lab3')" style="height: 50px;
+    font-size: 20px">Lab3</button>
+    </div>
+    <div style="margin-left:30px">
+        <div class="w3-padding"></div>
 
-            <div class="col-md-9">
-                <h1 style=" padding: 20px;padding-left: 450px"> Lab </h1>
-                <div class="list_wrap">
-                    <!-- Tab links -->
-                    <div class="tab">
-                        <button class="tablinks active">Lab 1</button>
-<!--                        <button class="tablinks">Lab 2</button>-->
-<!--                        <button class="tablinks">Lab 3</button>-->
-                    </div>
-
-                    <div id="Lab1" class="tabcontent">
-                        <h3>Lab1</h3>
-                        <div class="w3-bar w3-black">
-                            <button class="w3-bar-item w3-button" onclick="openCity('London')">Requirement</button>
-                            <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Design</button>
-                            <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Implement</button>
-                        </div>
-
-                        <div id="London" class="w3-container w3-display-container city">
-  <span onclick="this.parentElement.style.display='none'"
-        class="w3-button w3-large w3-display-topright"></span>
-                            <h2>Requirement</h2>
-                            <h3>1. Yêu cầu</h3>
-                            <p class="contents">Chọn 1 đối tượng bất kỳ trong thế giới
-                                thực, vídụ như sinh viên, môn học, giảng viên,… đểt hiết
-                                kế trên phần mềm một chức năng trên web đểt hêm, sửa,
-                                xóa,tìm kiếm cho đối tượng đó</p>
-                            <h3>2. Upload tất cả lên Azure/github trong menu Lab1 theo
-                                thứ tự: </h3>
-                            <div class="rqcontainer">
-                                <ul class="rqul">
-                                    <li class="rqli">
-                                        <p><strong>Tab Yêu cầu:</strong> copy lại nội
-                                            dung của phần 1 vào đây (trình bày cho đẹp).
-                                        </p>
-                                    </li>
-                                    <li class="rqli">
-                                        <p><strong>Tab Thiết kế:</strong> để link tới
-                                            các file sau đây:</p>
-                                        <ul class="abc">
-                                            <li class="bca"><p>Thiết kế trên giấy (chụp
-                                                lại ảnh).</p></li>
-                                            <li class="bca"><p>Thiết kế trên phần mềm
-                                                thiết kế.</p></li>
-                                        </ul>
-                                    </li>
-                                    <li class="rqli">
-                                        <p><strong>Tab Hiện thực:</strong> chuyển tất cả
-                                            thiết kế ở trên ở trên sang html.</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        <div id="Paris" class="w3-container w3-display-container city" style="display:none">
-  <span onclick="this.parentElement.style.display='none'"
-        class="w3-button w3-large w3-display-topright"></span>
-                            <h2>Design</h2>
-  <h3>1. Thiết kế trên giấy.</h3>
-                            <div class="img">
-                                <div class="content1">
-                                    <div class="img">
-                                        <h4> Add student</h4>
-                                        <div class="thumb" style="background-image: url(https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.0-9/72201081_2411271882533680_7533016962352283648_n.jpg?_nc_cat=108&_nc_oc=AQlg2hNBm3u6iXrxp1U8wwzRPOEuRVqFutMx4UEZY_HQHuw3PbyMn7QX1O_Jvz7oOJYB-Qli_GeKQ1upG7bizqbW&_nc_ht=scontent.fsgn5-5.fna&oh=e213c68b1b4773476b739c088eab3d11&oe=5E2EB6A3)" ></div>
-                                    </div>
-                                    <div class="icondownload">
-                                        <a download="addstudent.jpg"
-                                           href="https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.0-9/72201081_2411271882533680_7533016962352283648_n.jpg?_nc_cat=108&_nc_oc=AQlg2hNBm3u6iXrxp1U8wwzRPOEuRVqFutMx4UEZY_HQHuw3PbyMn7QX1O_Jvz7oOJYB-Qli_GeKQ1upG7bizqbW&_nc_ht=scontent.fsgn5-5.fna&oh=e213c68b1b4773476b739c088eab3d11&oe=5E2EB6A3" title="Image">
-                                            <i class="fas fa-download"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                        </div>                        </div>
-
-                        <div id="Tokyo" class="w3-container w3-display-container city" style="display:none">
-  <span onclick="this.parentElement.style.display='none'"
-        class="w3-button w3-large w3-display-topright"></span>
-                            <h2>Implement</h2>
-                            <p>Tokyo is the capital of Japan.</p>
-                        </div>
-                    </div>
-
-<!--                    <div id="Lab2" class="tabcontent">-->
-<!--                        <h3>Lab2</h3>-->
-<!--                        <div class="w3-bar w3-black">-->
-<!--                            <button class="w3-bar-item w3-button" onclick="openCity('London1')">Requirement</button>-->
-<!--                            <button class="w3-bar-item w3-button" onclick="openCity('Paris1')">Design</button>-->
-<!--                            <button class="w3-bar-item w3-button" onclick="openCity('Tokyo1')">Implement</button>-->
-<!--                        </div>-->
-
-<!--                        <div id="London1" class="w3-container w3-display-container city">-->
-<!--  <span onclick="this.parentElement.style.display='none'"-->
-<!--        class="w3-button w3-large w3-display-topright"></span>-->
-<!--                            <h2>Requirement</h2>-->
-
-<!--                            <ul>-->
-<!--                                <li> (1) Tạo ra một user scenario</li>-->
-<!--                                <li>  (2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện Web trên công cụ thiết kế đã chọn. Sau đó tạo ra file html tương  ứng cho thiết kế này.</li>-->
-<!--                                <li>  Upload lên Azure / github: trong file html có chèn hình ảnh của user scenario ở (1) và đường dẫn của file thiết kế ở (2).</li>-->
-
-<!--                            </ul>-->
-
-
-<!--                            </div>-->
-
-<!--                            <div id="Paris1" class="w3-container w3-display-container city" style="display:none">-->
-<!--  <span onclick="this.parentElement.style.display='none'"-->
-<!--        class="w3-button w3-large w3-display-topright"></span>-->
-<!--                                <h2>Design</h2>-->
-<!--                                <p>Paris is the capital of France.</p>-->
-<!--                            </div>-->
-
-<!--                            <div id="Tokyo1" class="w3-container w3-display-container city" style="display:none">-->
-<!--  <span onclick="this.parentElement.style.display='none'"-->
-<!--        class="w3-button w3-large w3-display-topright"></span>-->
-<!--                                <h2>Implement</h2>-->
-<!--                                <p>Tokyo is the capital of Japan.</p>-->
-<!--                            </div>-->
-<!--                    </div>-->
-
-<!--                    <div id="CSS" class="tabcontent">-->
-<!--                        <h3>CSS</h3>-->
-<!--                        <p>-->
-<!--                            CSS là chữ viết tắt của Cascading Style Sheets, nó là một ngôn ngữ được sử dụng để-->
-<!--                            tìm và định dạng lại các phần tử được tạo ra bởi các ngôn ngữ đánh dấu (ví dụ như HTML).-->
-<!--                        </p>-->
-<!--                    </div>-->
-                    </div>
+        <div id="Lab1" class="w3-container city w3-animate-opacity" style="display:none">
+            <!--        <div id="container">-->
+            <div class="tab">
+                <button class="tablinks active">Requiment</button>
+                <button class="tablinks">Design</button>
+                <button class="tablinks">Implement</button>
             </div>
+            <div id="Requiment" class="tabcontent">
+                <h1>Requiment</h1>
+                <ol>
+                    <li><p><span>Yêu cầu:</span> Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
+                        như sinh viên, môn học, giảng viên,... để thiết kế trên phần
+                        mềm một chức năng trên web để thêm, sửa, xóa, tìm kiếm
+                        cho đối tượng đó.</p></li>
+                    <li>
+                        Upload tất cả lên Azure / github trong menu Lab1 theo thứ tự:
+                        <ul>
+                            <li><span>Tab Yêu cầu: </span>copy lại nội dung của phần 1 vào đây (trình bày
+                                cho đẹp)</li>
+                            <li>
+                                <span> Tab Thiết kế:</span> để link tới các file sau đây:
+                                <ul>
+
+                                    <li>Thiết kế trên giấy (chụp lại ảnh)</li>
+                                    <li>Thiết kế trên phần mềm thiết kế</li>
+                                </ul>
+                            </li>
+                            <li><span>Tab Hiện thực:</span> chuyển tất cả thiết kế ở trên ở trên sang html</li>
+
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div id="Design" class="tabcontent">
+                <h1>Design</h1>
+                <p class="temp"> Thiết kế trên giấy</p>
+                <div class="image-container">
+                    <div class="image-container"><span>Them mon hoc</span><img src="https://www.facebook.com/photo.php?fbid=2411271879200347&set=pb.100009526766108.-2207520000.1571675124.&type=3&size=720%2C960" style="width: 400px"></div>
+<!--                    <p class="down"><a download="add.jpg" href="add.jpg">download</a></p>-->
+<!--                    <div class="image-container"><span>Sua thong tin</span><img src="edit.jpg" style="width: 400px"></div>-->
+<!--                    <p class="down"><a download="edit.jpg" href="edit.jpg">download</a></p>-->
+                    <div class="image-container"><span>Xoa theo ma mon hoc</span><img src="delete.jpg" style="width: 400px"></div>
+<!--                    <p class="down"><a download="delete.jpg" href="delete.jpg">download</a></p>-->
+                    <div class="image-container"><span>Tim kiem</span><img src="https://www.facebook.com/photo.php?fbid=2411271929200342&set=pb.100009526766108.-2207520000.1571675124.&type=3&size=960%2C720" style="width: 400px"></div>
+<!--                    <p class="down"><a download="search.jpg" href="search.jpg">download</a></p>-->
+                </div>
+                <p class="temp">Thiết kế trên Figma</p>
+            </div>
+
+            <div id="Implement" class="tabcontent">
+                <h1>Imlpement</h1>
+                <div class="bound gh">
+                    <iframe width="800px" height="400px" src="addStudent.html"></iframe>
+                    <a download="addStudent.html" href="addStudent.html" >ADD<i class="fas fa-download"></i> </a>
+                    <iframe width="800px" height="400px" src="suaTT.html"></iframe>
+                    <a download="suaTT.html" href="suaTT.html" >EDIT  <i class="fas fa-download"></i> </a>
+                    <iframe width="800px" height="400px" src="Xoa.html"></iframe>
+                    <a download="Xoa.html" href="Xoa.html" >DELETE  <i class="fas fa-download"></i></a>
+                    <iframe width="800px" height="400px" src="Timkiem.html"></iframe>
+                    <a download="Timkiem.html" href="Timkiem.html" >SEARCH<i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div style="margin-left:100px">
+        <div class="w3-padding"></div>
+        <div id="Lab2" class="w3-container city w3-animate-opacity" style="display:none">
+            <!--        <div id="container">-->
+            <div class="tab">
+                <button class="tablinks active">Requiment1</button>
+                <button class="tablinks">Design1</button>
+                <button class="tablinks">Implement1</button>
+            </div>
+            <div id="Requiment1" class="tabcontent">
+                <h1>Requiment</h1>
+                <ol>
+                    <li><p><span>Yêu cầu:</span> Tạo ra một user scenario </p></li>
+                    <li>
+                        Chọn1 bước trong user scenario để thiết kế 1 form giao diện Web trên công cụ thiết kế đã chọn.
+                        Sau đó tạo ra file html tương ứng cho thiết kế này.
+                    </li>
+                    <ul>
+                        <li>
+                            Upload lênAzure / github: trong file html có chèn hình ảnh của user scenario ở (1) và đường dẫn của file thiết kế ở (2).
+                        </li>
+                    </ul>
+                </ol>
+            </div>
+            <div id="Design1" class="tabcontent">
+                <h1>Design</h1>
+                <p class="temp"> Thiết kế trên giấy</p>
+                <p class="temp">Thiết kế trên Figma</p>
+            </div>
+
+            <div id="Implement1" class="tabcontent">
+                <h1>Imlpement</h1>
+            </div>
+        </div>
     </div>
     </div>
     </div>
@@ -336,35 +354,6 @@ line-height: 3pc;">
         </ul>					</div>
 </footer>
 <script>
-    function openCity(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
-    }
-</script>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $(window).load(function() {
-            if ($('.collapse navbar-collapse').length > 0) {
-                var _top = $('.collapse navbar-collapse').offset().top - parseFloat($('.wrapper-nav').css('marginTop').replace(/auto/, 0));
-                $(window).scroll(function(evt) {
-                    var _y = $(this).scrollTop();
-                    if (_y > _top) {
-                        $('.collapse navbar-collapse').addClass('fixed');
-                        $('.main-1').css("margin-top", "30px")
-                    } else {
-                        $('.collapse navbar-collapse').removeClass('fixed');
-                        $('.main-1').css("margin-top", "0")
-                    }
-                })
-            }
-        });
-    });
-</script>
-<script type="text/javascript">
     var buttons = document.getElementsByClassName('tablinks');
     var contents = document.getElementsByClassName('tabcontent');
     function showContent(id){
@@ -384,36 +373,55 @@ line-height: 3pc;">
             showContent(id);
         });
     }
-    showContent('Lab1');
-</script>
-<!--<script type="text/javascript">-->
-<!--    var buttons = document.getElementsByClassName('tablinks');-->
-<!--    var contents = document.getElementsByClassName('tabcontent');-->
-<!--    function showContent(id){-->
-<!--        for (var i = 0; i < contents.length; i++) {-->
-<!--            contents[i].style.display = 'none';-->
-<!--        }-->
-<!--        var content = document.getElementById(id);-->
-<!--        content.style.display = 'block';-->
-<!--    }-->
-<!--    for (var i = 0; i < buttons.length; i++) {-->
-<!--        buttons[i].addEventListener("click", function(){-->
-<!--            var id = this.textContent;-->
-<!--            for (var i = 0; i < buttons.length; i++) {-->
-<!--                buttons[i].classList.remove("active");-->
-<!--            }-->
-<!--            this.className += " active";-->
-<!--            showContent(id);-->
-<!--        });-->
-<!--    }-->
-<!--    showContent('Lab2');-->
-<!--</script>-->
-<script type="e5367997f1f25bd4142259a4-text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    showContent('Requiment');
+    // showContent('Requiment1');
 
-  gtag('config', 'UA-23581568-13');
-</script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="e5367997f1f25bd4142259a4-|49" defer=""></script></body>
+    function openLink(evt, animName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(animName).style.display = "block";
+        evt.currentTarget.className += " w3-red";}
+        </script>
+
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(window).load(function() {
+            if ($('.collapse navbar-collapse').length > 0) {
+                var _top = $('.collapse navbar-collapse').offset().top - parseFloat($('.wrapper-nav').css('marginTop').replace(/auto/, 0));
+                $(window).scroll(function(evt) {
+                    var _y = $(this).scrollTop();
+                    if (_y > _top) {
+                        $('.collapse navbar-collapse').addClass('fixed');
+                        $('.main-1').css("margin-top", "30px")
+                    } else {
+                        $('.collapse navbar-collapse').removeClass('fixed');
+                        $('.main-1').css("margin-top", "0")
+                    }
+                })
+            }
+        });
+    });
+}
+ </script>
+
+
+<!--<script type="e5367997f1f25bd4142259a4-text/javascript">-->
+
+<!--  window.dataLayer = window.dataLayer || [];-->
+<!--  function gtag(){dataLayer.push(arguments);}-->
+<!--  gtag('js', new Date());-->
+
+<!--  gtag('config', 'UA-23581568-13');-->
+<!--</script>-->
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="e5367997f1f25bd4142259a4-|49" defer=""></script>
+</body>
 </html>
