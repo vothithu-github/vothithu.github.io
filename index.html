@@ -13,6 +13,34 @@
         text-align: center;
 
     }
+    .nav {
+        overflow: hidden;
+        background-color: #adadad;
+        top: 0;
+        position: fixed;
+        width: 50%;
+        margin-left: 17px;
+        padding-left: 307px;
+
+    }
+
+    .nav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 13px 32px;
+        text-decoration: none;
+        font-size: 27px;
+    }
+    ul li{
+        list-style: none;
+
+    }
+    ul li a:hover{
+        background-color: #f9f9f9;
+        color: black;
+    }
     .collapse{
         position: fixed;
         width: 2107px;
@@ -133,17 +161,21 @@
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#b8daff">
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="index.html"><h1><span>P</span>ersonal</h1></a>
-        <div class="collapse navbar-collapse" id="ftco-nav" >
+<!--    <div class="container">-->
+    <div class="nav">
+
+<!--        <div class="collapse navbar-collapse" id="ftco-nav" >-->
             <ul class="navbar-nav nav ml-auto">
-                <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-                <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-                <li class="nav-item"><a href="#lab-section" class="nav-link"><span>Lab</span></a></li>
-                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+                <li class="nav-item"><a href="#home-section" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about-section" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#lab-section" class="nav-link">Lab</a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link">Contact</a></li>
             </ul>
-        </div>
+
     </div>
+    <a class="navbar-brand" href="index.html"><h1>Personal</h1></a>
+<!--        </div>-->
+<!--    </div>-->
 </nav>
 <section class="hero-wrap js-fullheight" id="home-section">
     <div class="overlay"></div>
@@ -257,8 +289,8 @@ line-height: 3pc;">
                 <div class="bound gh">
                     <iframe width="800px" height="400px" src="addStudent.html"></iframe>
                     <a download="addStudent.html" href="addStudent.html" >ADD<i class="fas fa-download"></i> </a>
-<!--                     <iframe width="800px" height="400px" src="suaTT.html"></iframe>
-                    <a download="suaTT.html" href="suaTT.html" >EDIT  <i class="fas fa-download"></i> </a> -->
+<!--                    <iframe width="800px" height="400px" src="suaTT.html"></iframe>-->
+<!--                    <a download="suaTT.html" href="suaTT.html" >EDIT  <i class="fas fa-download"></i> </a>-->
                     <iframe width="800px" height="400px" src="Xoa.html"></iframe>
                     <a download="Xoa.html" href="Xoa.html" >DELETE  <i class="fas fa-download"></i></a>
                     <iframe width="800px" height="400px" src="Timkiem.html"></iframe>
@@ -348,9 +380,9 @@ line-height: 3pc;">
 
     <div class="socials right">
         <ul id="menu-social-menu" class="">
-            <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-twitter-color-icon-png-image_3547789.jpg" width="30px"><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-instagram-color-icon-png-image_3547787.jpg" width="30px"><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
-            <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-facebook-black-amp;-white-icon-png-image_3547793.jpg" width="30px"><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+            <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="https://twitter.com"><img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-twitter-color-icon-png-image_3547789.jpg" width="30px"><i class="fa fa-twitter"></i></a></li>
+            <li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="https://instagram.com"><img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-instagram-color-icon-png-image_3547787.jpg" width="30px"><i class="fa fa-instagram"></i></a></li>
+            <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="https://www.facebook.com"><img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-facebook-black-amp;-white-icon-png-image_3547793.jpg" width="30px"><i class="fa fa-facebook"></i></a></li>
         </ul>					</div>
 </footer>
 <script>
@@ -414,14 +446,14 @@ line-height: 3pc;">
  </script>
 
 
-<!--<script type="e5367997f1f25bd4142259a4-text/javascript">-->
+<script type="e5367997f1f25bd4142259a4-text/javascript">
 
-<!--  window.dataLayer = window.dataLayer || [];-->
-<!--  function gtag(){dataLayer.push(arguments);}-->
-<!--  gtag('js', new Date());-->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<!--  gtag('config', 'UA-23581568-13');-->
-<!--</script>-->
+  gtag('config', 'UA-23581568-13');
+</script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="e5367997f1f25bd4142259a4-|49" defer=""></script>
 </body>
 </html>
