@@ -157,6 +157,32 @@
         /*margin-inside: 20px;*/
         margin: 50px;
     }
+    .bound{
+        padding-left: 30px;
+        margin-top: 10px;
+    }
+    .rqcontainer .rqul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+    }
+    .rqcontainer .rqul li{
+        list-style-type: circle;
+    }
+    .rqcontainer .rqul .rqli{
+        width: max-content !important;
+        margin-bottom: 10px !important;
+    }
+
+    .rqcontainer .rqul li p{
+        width: max-content;
+    }
+    .imgsenario{
+        width: 600px;
+        height: 500px;
+        background-repeat: round;
+    }
 </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#b8daff">
@@ -272,12 +298,12 @@ line-height: 3pc;">
                 <h1>Design</h1>
                 <p class="temp"> Thiết kế trên giấy</p>
                 <div class="image-container">
-                    <div class="image-container"><span>Thêm môn học</span><img src="add.jpg" height="560"
+                    <div class="image-container"><span>Thêm môn học</span><img src="../img/add.jpg" height="560"
                                                                                width="420"/></div>
                     <p class="down"><a download="add.jpg" href="add.jpg">download</a></p>
-                    <div class="image-container"><span>Xóa theo mã môn học</span><img src="delete.jpg" height="560" width="320" /></div>
+                    <div class="image-container"><span>Xóa theo mã môn học</span><img src="../img/delete.jpg" height="560" width="320" /></div>
                     <p class="down"><a download="delete.jpg" href="delete.jpg">download</a></p>
-                    <div class="image-container"><span>Tìm kiếm</span><img src="search.jpg" height="420"
+                    <div class="image-container"><span>Tìm kiếm</span><img src="../img/search.jpg" height="420"
                                                                            width="360"/></div>
                     <p class="down"><a download="search.jpg" href="search.jpg">download</a></p>
                 </div>
@@ -304,6 +330,7 @@ line-height: 3pc;">
             <!--        <div id="container">-->
             <div class="tab">
                 <button class="tablinks active">Requiment1</button>
+                <button class="tablinks ">Scenario</button>
                 <button class="tablinks">Design1</button>
                 <button class="tablinks">Implement1</button>
             </div>
@@ -321,6 +348,25 @@ line-height: 3pc;">
                         </li>
                     </ul>
                 </ol>
+            </div>
+
+            <div id="scenarioweek2" class="container tab-pane fade">
+                <div class="bound">
+                    <div class="rqcontainer">
+                        <div class="img">
+                            <img src="lab2.png" width="1000px"
+                                 height="500px">
+                        </div>
+                        <div class="icondownload">
+                            <a download="lab2.png"
+                               href="lab2.png"
+                               title="ImageName">
+                                <i class="fas fa-download"><img src="http://www.iconarchive.com/download/i99352/dtafalonso/android-lollipop/Downloads.ico" style="width: 30px;"></i>
+                            </a>
+                        </div>
+                        <div class="imgsenario"></div>
+                    </div>
+                </div>
             </div>
             <div id="Design1" class="tabcontent">
                 <h1>Design</h1>
