@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scenario</title>
+    <style>
+        .input_field{
+            /*margin-bottom: 20px;*/
+            position: relative;
+        }
+        .chooses .right{
+            margin-left: 3px;
+            margin-right: 35px;
+        }
+        .chooses{
+            float: right;
+            margin-top: 20px;
+            margin-right: 24px;
+        }
+        .chooses select{
+            width: 150px;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 5px;
+            background: #19eacc;
+        }
+        .form-login-btn {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 121px;
+        }
+
+        .login-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            min-width: 160px;
+            height: 50px;
+            background-color: #bd59d4;
+            border-radius: 25px;
+            font-family: Arial;
+            font-size: 14px;
+            color: #fff;
+            line-height: 1.2;
+            text-transform: uppercase;
+            transition: all 0.4s;
+            box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+        }
+
+        .login-btn:hover {
+            background-color: #4b2354;
+            box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+        }
+    </style>
+</head>
+<body style="border: 9px solid darkgray; width: 700px; height: 414px">
+<div class="col" style="display: flex; margin: 20px" >
+<!--    <h1 class="big" style=" padding: 20px;padding-left: 550px">About</h1>-->
+<!--    <div style="float: right ; font-size: 17px;-->
+<!--line-height: 3pc;">-->
+    <div class="left" style="margin-right: 42px"><img src="../img/pizza.jpg" height="189" width="254"/></div>
+    <div class="right">
+        <h2 class="mb-4">PIZZA MẶT TRỜI</h2>
+        <p>Tôm, bí ngòi, phô mai 2 màu, phô mai Mozza, cà bi, ngò tây, xốt Pesto.</p>
+        <p>Cỡ vừa : 275.000đ</p>
+        <p>Cỡ lớn : 385.000đ</p>
+</div>
+
+
+</div>
+    <div class="input_field chooses">
+            <span class="col left">
+                    <select class="select-title" name="service">
+                        <option value=" ">Cỡ vừa</option>
+                        <option value="1">Cỡ lớn</option>
+                    </select>
+
+            </span>
+        <span class="col right">
+                    <select class="select-title" name="service">
+                        <option value=" ">Đế dày</option>
+                        <option value="1">Đế mỏng</option>
+
+                    </select>
+            </span>
+    </div>
+<div class="form-login-btn">
+    <button class="login-btn">
+        BẮT ĐẦU ĐẶT HÀNG
+    </button>
+</div>
+</body>
+</html>
