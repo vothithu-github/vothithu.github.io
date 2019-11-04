@@ -15,7 +15,7 @@
     }
     .nav {
         overflow: hidden;
-        background-color: #adadad;
+        background-color: #b4d59d;
         top: 0;
         position: fixed;
         width: 50%;
@@ -96,6 +96,9 @@
     div.w3-sidebar button.active {
         background-color: #ccc;
     }
+    .w3-sidebar{
+
+    }
     div.tab {
         overflow: hidden;
         border: 1px solid #ccc;
@@ -116,6 +119,7 @@
     div.tab button:hover {
         background-color: #ddd;
     }
+
     div.tab button.active {
         background-color: #ccc;
     }
@@ -196,7 +200,7 @@
     }
 </style>
 </head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#b8daff">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#f9f9f9">
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="nav">
             <ul class="navbar-nav nav ml-auto">
@@ -375,7 +379,7 @@ line-height: 3pc;">
                                                         <i class="fas fa-download"><img src="http://www.iconarchive.com/download/i99352/dtafalonso/android-lollipop/Downloads.ico" style="width: 30px;"></i>
                                                     </a>
                                                 </div>
-                                                <div class="imgsenario"></div>
+<!--                                                <div class="imgsenario"></div>-->
                                             </div>
                                         </div>
             </div>
@@ -439,7 +443,7 @@ line-height: 3pc;">
                     <div class="content1">
                         <div class="skf-pattent">
 
-<!--                             <img width="400px" height="400px" cv src="../lab/F-pattent.jpg"> -->
+<!--                            <img width="400px" height="400px" cv src="../lab/F-pattent.jpg">-->
                         </div>
                         <div class="icondownload">
                             <a class="abcd" download="F-pattent.jpg"
@@ -466,7 +470,7 @@ line-height: 3pc;">
                     <div class="content1">
                         <div class="skf-pattent">
 
-<!--                             <img width="400px" height="400px" cv src="../lab/F-pattent.jpg"> -->
+<!--                            <img width="400px" height="400px" cv src="../lab/F-pattent.jpg">-->
                         </div>
                         <div class="icondownload">
                             <a class="abcd" download="F-pattent.jpg"
@@ -485,8 +489,8 @@ line-height: 3pc;">
             </div>
             </div>
     </div>
-        </div>
-    </div>
+<!--        </div>-->
+<!--    </div>-->
 </section>
 
 <hr  width="30%" align="center" />
@@ -576,10 +580,10 @@ line-height: 3pc;">
 
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-        $(window).load(function() {
+        $(window).load(function () {
             if ($('.collapse navbar-collapse').length > 0) {
                 var _top = $('.collapse navbar-collapse').offset().top - parseFloat($('.wrapper-nav').css('marginTop').replace(/auto/, 0));
-                $(window).scroll(function(evt) {
+                $(window).scroll(function (evt) {
                     var _y = $(this).scrollTop();
                     if (_y > _top) {
                         $('.collapse navbar-collapse').addClass('fixed');
@@ -591,8 +595,8 @@ line-height: 3pc;">
                 })
             }
         });
-    });
-}
+    })
+
  </script>
 
 
